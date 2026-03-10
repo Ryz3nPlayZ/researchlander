@@ -308,8 +308,71 @@
                     </div>
                 </form>
 
+                <!-- Hero Mockup -->
+                <div class="hero-fade mt-16 w-full max-w-5xl mx-auto px-4" style="transition-delay: 500ms;">
+                    <div id="hero-mockup" class="bg-white rounded-xl border border-stone-200 shadow-2xl overflow-hidden transform transition-all duration-700">
+                        <!-- Window Header -->
+                        <div class="h-10 border-b border-stone-200 flex items-center px-3 bg-gray-50/80 gap-3">
+                            <div class="flex gap-1.5">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                            </div>
+                            <div class="flex-grow flex justify-center">
+                                <div class="px-3 py-1 bg-white border border-stone-200 rounded text-[10px] font-medium text-gray-500 flex items-center gap-1.5">
+                                    <iconify-icon icon="solar:lock-keyhole-linear" width="10"></iconify-icon>
+                                    workspace.researca.na
+                                </div>
+                            </div>
+                            <div class="w-12"></div>
+                        </div>
+                        <!-- Body -->
+                        <div class="flex h-64 sm:h-80">
+                            <!-- Sidebar -->
+                            <div class="w-32 sm:w-40 border-r border-stone-200 bg-gray-50/40 p-3 hidden sm:block">
+                                <div class="text-[8px] font-medium text-gray-400 mb-2 uppercase tracking-wider">Active Project</div>
+                                <div class="flex flex-col gap-1 text-[10px] text-gray-600">
+                                    <div class="flex items-center gap-1.5 px-2 py-1.5 bg-slate-100 text-black rounded">
+                                        <iconify-icon icon="solar:document-text-linear" width="10"></iconify-icon>
+                                        Multi-Agent Review
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-[8px] font-medium text-gray-400 mb-2 uppercase tracking-wider">Orchestration</div>
+                                <div class="flex flex-col gap-1.5">
+                                    <div class="flex items-center justify-between px-1">
+                                        <span class="text-[9px] text-gray-600">Literature</span>
+                                        <span class="text-[8px] text-green-600">Done</span>
+                                    </div>
+                                    <div class="flex items-center justify-between px-1">
+                                        <span class="text-[9px] text-gray-600">Fact Check</span>
+                                        <span class="text-[8px] text-green-600">Done</span>
+                                    </div>
+                                    <div class="flex items-center justify-between px-1 py-1 bg-white border border-stone-200 rounded">
+                                        <span class="text-[9px] text-black">Citations</span>
+                                        <span class="text-[8px] text-slate-600">Active</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Editor -->
+                            <div class="flex-grow p-4 sm:p-6 bg-white">
+                                <h3 class="text-base sm:text-lg font-serif text-black mb-4 leading-tight">Impact of Multi-Agent Frameworks on Cognitive Load...</h3>
+                                <div class="space-y-2">
+                                    <div class="h-2 bg-gray-100 rounded w-full"></div>
+                                    <div class="h-2 bg-gray-100 rounded w-4/5"></div>
+                                    <div class="h-2 bg-gray-100 rounded w-full"></div>
+                                    <div class="h-2 bg-gray-100 rounded w-3/5"></div>
+                                </div>
+                                <div class="mt-6 flex items-center gap-2">
+                                    <div class="h-5 w-5 bg-slate-100 rounded text-[8px] flex items-center justify-center text-gray-500">1</div>
+                                    <div class="h-5 w-5 bg-slate-100 rounded text-[8px] flex items-center justify-center text-gray-500">2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Scroll indicator -->
-                <div class="hero-fade mt-16" style="transition-delay: 400ms;">
+                <div class="hero-fade mt-12" style="transition-delay: 600ms;">
                     <div class="flex flex-col items-center gap-2 text-gray-400">
                         <span class="text-[10px] uppercase tracking-widest font-medium">Scroll to explore</span>
                         <div class="w-px h-8 bg-gradient-to-b from-gray-300 to-transparent"></div>
@@ -318,245 +381,176 @@
             </div>
         </section>
 
-        <!-- How It Works: Sticky Scroll with Drawing Lines -->
-        <section id="agent-workflow" class="relative bg-gradient-to-b from-white via-slate-50/30 to-white">
+        <!-- How It Works: Sticky Zoom with Feature Cards -->
+        <section id="agent-workflow" class="relative" style="height: 600vh;">
             
-            <!-- Section Header -->
-            <div class="py-20 text-center">
-                <h2 class="text-3xl md:text-4xl text-black font-serif font-normal tracking-tight">How It Works</h2>
-                <p class="text-gray-500 mt-2 text-sm">Scroll to explore the agent ecosystem</p>
-            </div>
-
-            <!-- Sticky Scroll Container -->
-            <div class="relative" style="height: 500vh;" id="sticky-container">
+            <!-- Sticky Container -->
+            <div class="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
                 
-                <!-- Sticky Wrapper -->
-                <div class="sticky top-16 h-[calc(100vh-4rem)] flex items-center" id="sticky-mockup">
-                    <div class="w-full px-4 sm:px-6 lg:px-8">
-                        <div class="max-w-7xl mx-auto">
-                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                                
-                                <!-- Left Column: Cards 1-3 -->
-                                <div class="hidden lg:flex flex-col gap-6 justify-center">
-                                    <!-- Card 1: PI Agent -->
-                                    <div class="workflow-card opacity-0 translate-x-[-30px] transition-all duration-700" data-step="1">
-                                        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-lg">
-                                            <div class="flex items-start gap-4">
-                                                <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center flex-shrink-0">
-                                                    <iconify-icon icon="solar:user-id-bold" width="24" class="text-white"></iconify-icon>
-                                                </div>
-                                                <div>
-                                                    <h4 class="text-base font-semibold text-black mb-1">PI Agent</h4>
-                                                    <p class="text-sm text-gray-500 leading-relaxed">Analyzes your research question and orchestrates the entire workflow.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                <!-- Background gradient that fades in -->
+                <div id="workflow-bg" class="absolute inset-0 bg-gradient-to-b from-white via-slate-50/50 to-white opacity-0 transition-opacity duration-1000"></div>
+                
+                <!-- Title that appears -->
+                <div id="workflow-title" class="absolute top-8 left-0 right-0 text-center opacity-0 translate-y-4 transition-all duration-700 z-20">
+                    <h2 class="text-2xl md:text-3xl text-black font-serif font-normal tracking-tight">How It Works</h2>
+                    <p class="text-gray-500 mt-1 text-sm">The agent ecosystem</p>
+                </div>
 
-                                    <!-- Card 2: Discovery -->
-                                    <div class="workflow-card opacity-0 translate-x-[-30px] transition-all duration-700 ml-4" data-step="2">
-                                        <div class="bg-white border border-blue-200 rounded-xl p-5 shadow-lg">
-                                            <div class="flex items-start gap-4">
-                                                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                                                    <iconify-icon icon="solar:magnifer-bold" width="24" class="text-blue-600"></iconify-icon>
-                                                </div>
-                                                <div>
-                                                    <h4 class="text-base font-semibold text-black mb-1">Discovery Agent</h4>
-                                                    <p class="text-sm text-gray-500 leading-relaxed">Searches across 200M+ papers with semantic understanding.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card 3: Analysis -->
-                                    <div class="workflow-card opacity-0 translate-x-[-30px] transition-all duration-700" data-step="3">
-                                        <div class="bg-white border border-purple-200 rounded-xl p-5 shadow-lg">
-                                            <div class="flex items-start gap-4">
-                                                <div class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center flex-shrink-0">
-                                                    <iconify-icon icon="solar:chart-2-bold" width="24" class="text-purple-600"></iconify-icon>
-                                                </div>
-                                                <div>
-                                                    <h4 class="text-base font-semibold text-black mb-1">Analysis Agent</h4>
-                                                    <p class="text-sm text-gray-500 leading-relaxed">Synthesizes findings, detects contradictions, maps consensus.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                <!-- Mockup Container - scales up on scroll -->
+                <div id="mockup-container" class="relative z-10 w-full max-w-5xl mx-auto px-4 transition-all duration-100" style="transform: scale(0.85); opacity: 0.7;">
+                    <div class="bg-white rounded-xl border border-stone-200 shadow-2xl overflow-hidden">
+                        <!-- Window Header -->
+                        <div class="h-10 border-b border-stone-200 flex items-center px-3 bg-gray-50/80 gap-3">
+                            <div class="flex gap-1.5">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                            </div>
+                            <div class="flex-grow flex justify-center">
+                                <div class="px-3 py-1 bg-white border border-stone-200 rounded text-[10px] font-medium text-gray-500 flex items-center gap-1.5">
+                                    <iconify-icon icon="solar:lock-keyhole-linear" width="10"></iconify-icon>
+                                    workspace.researca.na
+                                </div>
+                            </div>
+                            <div class="w-12"></div>
+                        </div>
+                        <!-- Body -->
+                        <div class="flex h-72 sm:h-96">
+                            <!-- Sidebar -->
+                            <div class="w-36 sm:w-44 border-r border-stone-200 bg-gray-50/40 p-4 hidden sm:block">
+                                <div class="text-[9px] font-medium text-gray-400 mb-3 uppercase tracking-wider">Active Project</div>
+                                <div class="flex flex-col gap-1.5 text-[11px] text-gray-600">
+                                    <div class="flex items-center gap-2 px-2 py-2 bg-slate-100 text-black rounded">
+                                        <iconify-icon icon="solar:document-text-linear" width="12"></iconify-icon>
+                                        Multi-Agent Review
                                     </div>
                                 </div>
-
-                                <!-- Center Column: App Mockup -->
-                                <div class="relative">
-                                    <!-- SVG Lines (visible on lg+) -->
-                                    <svg class="absolute inset-0 w-full h-full pointer-events-none hidden lg:block" style="z-index: -1;" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
-                                        <!-- Left lines -->
-                                        <path id="line-1" d="M 50 80 L 0 60" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="100" opacity="0"/>
-                                        <path id="line-2" d="M 50 160 L 0 160" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="100" opacity="0"/>
-                                        <path id="line-3" d="M 50 240 L 0 260" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="100" opacity="0"/>
-                                        <!-- Right lines -->
-                                        <path id="line-4" d="M 350 120 L 400 100" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="100" opacity="0"/>
-                                        <path id="line-5" d="M 350 280 L 400 300" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="100" opacity="0"/>
-                                    </svg>
-
-                                    <!-- App Mockup -->
-                                    <div class="relative z-10 mx-auto max-w-md">
-                                        <div class="bg-white rounded-xl border border-stone-200 shadow-2xl overflow-hidden">
-                                            <!-- Window Header -->
-                                            <div class="h-10 border-b border-stone-200 flex items-center px-3 bg-gray-50/80 gap-3">
-                                                <div class="flex gap-1.5">
-                                                    <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                                                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
-                                                    <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
-                                                </div>
-                                                <div class="flex-grow flex justify-center">
-                                                    <div class="px-3 py-1 bg-white border border-stone-200 rounded text-[10px] font-medium text-gray-500 flex items-center gap-1.5">
-                                                        <iconify-icon icon="solar:lock-keyhole-linear" width="10"></iconify-icon>
-                                                        workspace.researca.na
-                                                    </div>
-                                                </div>
-                                                <div class="w-12"></div>
-                                            </div>
-                                            <!-- Body -->
-                                            <div class="flex h-56">
-                                                <!-- Sidebar -->
-                                                <div class="w-28 border-r border-stone-200 bg-gray-50/40 p-3 hidden sm:block">
-                                                    <div class="text-[8px] font-medium text-gray-400 mb-2 uppercase tracking-wider">Active Project</div>
-                                                    <div class="flex flex-col gap-1 text-[10px] text-gray-600">
-                                                        <div class="flex items-center gap-1.5 px-2 py-1.5 bg-slate-100 text-black rounded">
-                                                            <iconify-icon icon="solar:document-text-linear" width="10"></iconify-icon>
-                                                            Multi-Agent Review
-                                                        </div>
-                                                    </div>
-                                                    <div class="mt-4 text-[8px] font-medium text-gray-400 mb-2 uppercase tracking-wider">Orchestration</div>
-                                                    <div class="flex flex-col gap-1.5">
-                                                        <div class="flex items-center justify-between px-1">
-                                                            <span class="text-[9px] text-gray-600">Literature</span>
-                                                            <span class="text-[8px] text-green-600">Done</span>
-                                                        </div>
-                                                        <div class="flex items-center justify-between px-1">
-                                                            <span class="text-[9px] text-gray-600">Fact Check</span>
-                                                            <span class="text-[8px] text-green-600">Done</span>
-                                                        </div>
-                                                        <div class="flex items-center justify-between px-1 py-1 bg-white border border-stone-200 rounded">
-                                                            <span class="text-[9px] text-black">Citations</span>
-                                                            <span class="text-[8px] text-slate-600">Active</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Editor -->
-                                                <div class="flex-grow p-4 bg-white">
-                                                    <h3 class="text-sm font-serif text-black mb-3 leading-tight">Impact of Multi-Agent Frameworks...</h3>
-                                                    <div class="space-y-2">
-                                                        <div class="h-2 bg-gray-100 rounded w-full"></div>
-                                                        <div class="h-2 bg-gray-100 rounded w-4/5"></div>
-                                                        <div class="h-2 bg-gray-100 rounded w-full"></div>
-                                                        <div class="h-2 bg-gray-100 rounded w-3/5"></div>
-                                                    </div>
-                                                    <div class="mt-4 flex items-center gap-2">
-                                                        <div class="h-5 w-5 bg-slate-100 rounded text-[8px] flex items-center justify-center text-gray-500">1</div>
-                                                        <div class="h-5 w-5 bg-slate-100 rounded text-[8px] flex items-center justify-center text-gray-500">2</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="mt-5 text-[9px] font-medium text-gray-400 mb-3 uppercase tracking-wider">Orchestration</div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center justify-between px-1">
+                                        <span class="text-[10px] text-gray-600">Literature Search</span>
+                                        <span class="text-[9px] text-green-600">Done</span>
+                                    </div>
+                                    <div class="flex items-center justify-between px-1">
+                                        <span class="text-[10px] text-gray-600">Fact Checker</span>
+                                        <span class="text-[9px] text-green-600">Done</span>
+                                    </div>
+                                    <div class="flex items-center justify-between px-2 py-1.5 bg-white border border-stone-200 rounded">
+                                        <span class="text-[10px] text-black">Citation Manager</span>
+                                        <span class="text-[9px] text-slate-600">Active</span>
                                     </div>
                                 </div>
-
-                                <!-- Right Column: Cards 4-5 -->
-                                <div class="hidden lg:flex flex-col gap-6 justify-center">
-                                    <!-- Card 4: Peer Evaluation -->
-                                    <div class="workflow-card opacity-0 translate-x-[30px] transition-all duration-700" data-step="4">
-                                        <div class="bg-white border border-amber-200 rounded-xl p-5 shadow-lg">
-                                            <div class="flex items-start gap-4">
-                                                <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center flex-shrink-0">
-                                                    <iconify-icon icon="solar:refresh-circle-bold" width="24" class="text-amber-600"></iconify-icon>
-                                                </div>
-                                                <div>
-                                                    <h4 class="text-base font-semibold text-black mb-1">Peer Evaluation</h4>
-                                                    <p class="text-sm text-gray-500 leading-relaxed">Multi-agent review for fact-checking, bias detection, citation verification.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card 5: Verified Output -->
-                                    <div class="workflow-card opacity-0 translate-x-[30px] transition-all duration-700 ml-4" data-step="5">
-                                        <div class="bg-white border border-emerald-200 rounded-xl p-5 shadow-lg">
-                                            <div class="flex items-start gap-4">
-                                                <div class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center flex-shrink-0">
-                                                    <iconify-icon icon="solar:document-text-bold" width="24" class="text-emerald-600"></iconify-icon>
-                                                </div>
-                                                <div>
-                                                    <h4 class="text-base font-semibold text-black mb-1">Verified Output</h4>
-                                                    <p class="text-sm text-gray-500 leading-relaxed">Publication-ready with full provenance tracking for every claim.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <!-- Editor -->
+                            <div class="flex-grow p-5 sm:p-8 bg-white">
+                                <h3 class="text-lg sm:text-xl font-serif text-black mb-5 leading-tight">Impact of Multi-Agent Frameworks on Cognitive Load in Academic Workflows</h3>
+                                <div class="space-y-3">
+                                    <div class="h-2.5 bg-gray-100 rounded w-full"></div>
+                                    <div class="h-2.5 bg-gray-100 rounded w-4/5"></div>
+                                    <div class="h-2.5 bg-gray-100 rounded w-full"></div>
+                                    <div class="h-2.5 bg-gray-100 rounded w-3/5"></div>
+                                    <div class="h-2.5 bg-gray-100 rounded w-5/6"></div>
                                 </div>
-
-                                <!-- Mobile: Simple list of cards -->
-                                <div class="lg:hidden space-y-4">
-                                    <div class="workflow-card opacity-0 translate-y-4 transition-all duration-700 bg-white border border-slate-200 rounded-xl p-4 shadow-md" data-step="1">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center">
-                                                <iconify-icon icon="solar:user-id-bold" width="20" class="text-white"></iconify-icon>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-sm font-semibold text-black">PI Agent</h4>
-                                                <p class="text-xs text-gray-500">Orchestrates the workflow</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="workflow-card opacity-0 translate-y-4 transition-all duration-700 bg-white border border-blue-200 rounded-xl p-4 shadow-md" data-step="2">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                                                <iconify-icon icon="solar:magnifer-bold" width="20" class="text-blue-600"></iconify-icon>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-sm font-semibold text-black">Discovery Agent</h4>
-                                                <p class="text-xs text-gray-500">Searches 200M+ papers</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="workflow-card opacity-0 translate-y-4 transition-all duration-700 bg-white border border-purple-200 rounded-xl p-4 shadow-md" data-step="3">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center">
-                                                <iconify-icon icon="solar:chart-2-bold" width="20" class="text-purple-600"></iconify-icon>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-sm font-semibold text-black">Analysis Agent</h4>
-                                                <p class="text-xs text-gray-500">Synthesizes findings</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="workflow-card opacity-0 translate-y-4 transition-all duration-700 bg-white border border-amber-200 rounded-xl p-4 shadow-md" data-step="4">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
-                                                <iconify-icon icon="solar:refresh-circle-bold" width="20" class="text-amber-600"></iconify-icon>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-sm font-semibold text-black">Peer Evaluation</h4>
-                                                <p class="text-xs text-gray-500">Fact-checking & verification</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="workflow-card opacity-0 translate-y-4 transition-all duration-700 bg-white border border-emerald-200 rounded-xl p-4 shadow-md" data-step="5">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center">
-                                                <iconify-icon icon="solar:document-text-bold" width="20" class="text-emerald-600"></iconify-icon>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-sm font-semibold text-black">Verified Output</h4>
-                                                <p class="text-xs text-gray-500">Publication-ready results</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="mt-8 flex items-center gap-2">
+                                    <div class="h-6 w-6 bg-slate-100 rounded text-[10px] flex items-center justify-center text-gray-500">1</div>
+                                    <div class="h-6 w-6 bg-slate-100 rounded text-[10px] flex items-center justify-center text-gray-500">2</div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Feature Cards that appear around the mockup -->
+                <!-- Card 1: PI Agent (Top Left) -->
+                <div class="feature-card absolute opacity-0 transition-all duration-700" style="left: 5%; top: 20%; transform: translate(-50px, 0);" data-card="1">
+                    <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-xl max-w-[220px]">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="solar:user-id-bold" width="20" class="text-white"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-black mb-1">PI Agent</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Analyzes your research question and orchestrates the entire workflow.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Connector dot -->
+                    <div class="absolute -right-2 top-1/2 w-2 h-2 bg-slate-400 rounded-full"></div>
+                </div>
+
+                <!-- Card 2: Discovery (Left Middle) -->
+                <div class="feature-card absolute opacity-0 transition-all duration-700" style="left: 3%; top: 45%; transform: translate(-50px, 0);" data-card="2">
+                    <div class="bg-white border border-blue-200 rounded-xl p-4 shadow-xl max-w-[220px]">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="solar:magnifer-bold" width="20" class="text-blue-600"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-black mb-1">Discovery</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Searches across 200M+ papers with semantic understanding.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -right-2 top-1/2 w-2 h-2 bg-blue-400 rounded-full"></div>
+                </div>
+
+                <!-- Card 3: Analysis (Bottom Left) -->
+                <div class="feature-card absolute opacity-0 transition-all duration-700" style="left: 8%; bottom: 20%; transform: translate(-50px, 0);" data-card="3">
+                    <div class="bg-white border border-purple-200 rounded-xl p-4 shadow-xl max-w-[220px]">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="solar:chart-2-bold" width="20" class="text-purple-600"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-black mb-1">Analysis</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Synthesizes findings, detects contradictions, maps consensus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -right-2 top-1/2 w-2 h-2 bg-purple-400 rounded-full"></div>
+                </div>
+
+                <!-- Card 4: Peer Evaluation (Top Right) -->
+                <div class="feature-card absolute opacity-0 transition-all duration-700" style="right: 5%; top: 25%; transform: translate(50px, 0);" data-card="4">
+                    <div class="bg-white border border-amber-200 rounded-xl p-4 shadow-xl max-w-[220px]">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="solar:refresh-circle-bold" width="20" class="text-amber-600"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-black mb-1">Peer Evaluation</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Fact-checking, bias detection, citation verification.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -left-2 top-1/2 w-2 h-2 bg-amber-400 rounded-full"></div>
+                </div>
+
+                <!-- Card 5: Output (Bottom Right) -->
+                <div class="feature-card absolute opacity-0 transition-all duration-700" style="right: 8%; bottom: 20%; transform: translate(50px, 0);" data-card="5">
+                    <div class="bg-white border border-emerald-200 rounded-xl p-4 shadow-xl max-w-[220px]">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="solar:document-text-bold" width="20" class="text-emerald-600"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-black mb-1">Verified Output</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">Publication-ready with full provenance tracking.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -left-2 top-1/2 w-2 h-2 bg-emerald-400 rounded-full"></div>
+                </div>
+
+                <!-- SVG Connector Lines -->
+                <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="connector-lines">
+                    <line id="conn-1" x1="15%" y1="25%" x2="35%" y2="35%" stroke="#94a3b8" stroke-width="1" stroke-dasharray="200" stroke-dashoffset="200" opacity="0"/>
+                    <line id="conn-2" x1="13%" y1="50%" x2="35%" y2="45%" stroke="#60a5fa" stroke-width="1" stroke-dasharray="200" stroke-dashoffset="200" opacity="0"/>
+                    <line id="conn-3" x1="18%" y1="75%" x2="35%" y2="55%" stroke="#a78bfa" stroke-width="1" stroke-dasharray="200" stroke-dashoffset="200" opacity="0"/>
+                    <line id="conn-4" x1="85%" y1="30%" x2="65%" y2="40%" stroke="#fbbf24" stroke-width="1" stroke-dasharray="200" stroke-dashoffset="200" opacity="0"/>
+                    <line id="conn-5" x1="88%" y1="75%" x2="65%" y2="55%" stroke="#34d399" stroke-width="1" stroke-dasharray="200" stroke-dashoffset="200" opacity="0"/>
+                </svg>
+
             </div>
         </section>
 
@@ -862,76 +856,96 @@
         }, { threshold: 0.15 });
         document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
 
-        // Sticky Workflow Section - Drawing Lines Animation
-        const stickyContainer = document.getElementById('sticky-container');
-        const workflowCards = document.querySelectorAll('.workflow-card');
-        const workflowLines = [
-            document.getElementById('line-1'),
-            document.getElementById('line-2'),
-            document.getElementById('line-3'),
-            document.getElementById('line-4'),
-            document.getElementById('line-5')
+        // Sticky Workflow Section - Zoom In + Feature Cards Reveal
+        const stickyContainer = document.getElementById('agent-workflow');
+        const mockupContainer = document.getElementById('mockup-container');
+        const workflowBg = document.getElementById('workflow-bg');
+        const workflowTitle = document.getElementById('workflow-title');
+        const featureCards = document.querySelectorAll('.feature-card');
+        const connectorLines = [
+            document.getElementById('conn-1'),
+            document.getElementById('conn-2'),
+            document.getElementById('conn-3'),
+            document.getElementById('conn-4'),
+            document.getElementById('conn-5')
         ];
 
-        if (stickyContainer) {
+        if (stickyContainer && mockupContainer) {
             window.addEventListener('scroll', () => {
                 const rect = stickyContainer.getBoundingClientRect();
                 const containerHeight = stickyContainer.offsetHeight;
                 const windowHeight = window.innerHeight;
                 
-                // Calculate scroll progress through the sticky section (0 to 1)
+                // Calculate scroll progress (0 to 1)
                 const scrollProgress = Math.max(0, Math.min(1, 
-                    (-rect.top + windowHeight * 0.2) / (containerHeight - windowHeight * 1.2)
+                    -rect.top / (containerHeight - windowHeight)
                 ));
 
-                // Animate cards and lines based on scroll progress
-                const steps = [
-                    { card: 0, line: 0, threshold: 0.05 },
-                    { card: 1, line: 1, threshold: 0.20 },
-                    { card: 2, line: 2, threshold: 0.35 },
-                    { card: 3, line: 3, threshold: 0.50 },
-                    { card: 4, line: 4, threshold: 0.65 }
-                ];
-
-                const isMobile = window.innerWidth < 1024;
-
-                steps.forEach((step, index) => {
-                    const card = workflowCards[step.card];
-                    const line = workflowLines[step.line];
+                // Phase 1: Zoom in mockup (0% - 25% scroll)
+                if (scrollProgress < 0.25) {
+                    const zoomProgress = scrollProgress / 0.25; // 0 to 1
+                    const scale = 0.85 + (zoomProgress * 0.15); // 0.85 to 1.0
+                    const opacity = 0.7 + (zoomProgress * 0.3); // 0.7 to 1.0
+                    mockupContainer.style.transform = `scale(${scale})`;
+                    mockupContainer.style.opacity = opacity;
                     
-                    if (scrollProgress > step.threshold) {
+                    // Fade in background
+                    workflowBg.style.opacity = zoomProgress * 0.5;
+                } else {
+                    mockupContainer.style.transform = 'scale(1)';
+                    mockupContainer.style.opacity = '1';
+                    workflowBg.style.opacity = '0.5';
+                }
+
+                // Phase 2: Show title (20% - 35% scroll)
+                if (scrollProgress > 0.20 && scrollProgress < 0.35) {
+                    const titleProgress = (scrollProgress - 0.20) / 0.15;
+                    workflowTitle.style.opacity = titleProgress;
+                    workflowTitle.style.transform = `translateY(${(1 - titleProgress) * 16}px)`;
+                } else if (scrollProgress >= 0.35) {
+                    workflowTitle.style.opacity = '1';
+                    workflowTitle.style.transform = 'translateY(0)';
+                } else {
+                    workflowTitle.style.opacity = '0';
+                    workflowTitle.style.transform = 'translateY(16px)';
+                }
+
+                // Phase 3: Reveal feature cards one by one (30% - 90% scroll)
+                const cardThresholds = [0.30, 0.42, 0.54, 0.66, 0.78];
+                
+                featureCards.forEach((card, index) => {
+                    const threshold = cardThresholds[index];
+                    const line = connectorLines[index];
+                    
+                    if (scrollProgress > threshold) {
                         // Show card
                         card.style.opacity = '1';
-                        if (isMobile) {
-                            card.style.transform = 'translateY(0)';
-                        } else {
-                            card.style.transform = 'translateX(0)';
-                        }
+                        card.style.transform = 'translate(0, 0)';
                         
-                        // Animate line drawing (desktop only)
-                        if (!isMobile && line) {
-                            const lineProgress = Math.min(1, (scrollProgress - step.threshold) * 8);
-                            line.style.strokeDashoffset = 100 * (1 - lineProgress);
-                            line.style.opacity = lineProgress;
+                        // Animate connector line
+                        if (line) {
+                            const lineProgress = Math.min(1, (scrollProgress - threshold) * 8);
+                            line.style.strokeDashoffset = 200 * (1 - lineProgress);
+                            line.style.opacity = lineProgress * 0.6;
                         }
                     } else {
-                        // Hide card
+                        // Hide card with appropriate direction
                         card.style.opacity = '0';
-                        if (isMobile) {
-                            card.style.transform = 'translateY(16px)';
+                        const isLeftSide = index < 3;
+                        if (isLeftSide) {
+                            card.style.transform = 'translate(-50px, 0)';
                         } else {
-                            // Left side cards slide from left, right side from right
-                            const isLeftSide = step.card < 3;
-                            card.style.transform = isLeftSide ? 'translateX(-30px)' : 'translateX(30px)';
+                            card.style.transform = 'translate(50px, 0)';
                         }
                         
                         // Reset line
                         if (line) {
-                            line.style.strokeDashoffset = '100';
+                            line.style.strokeDashoffset = '200';
                             line.style.opacity = '0';
                         }
                     }
                 });
+
             }, { passive: true });
         }
 
@@ -959,22 +973,7 @@
             }, 1200);
         }
 
-        // Workflow section reveal on scroll
-        const workflowSection = document.getElementById('agent-workflow');
-        if (workflowSection) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        workflowSection.querySelectorAll('.reveal-up').forEach((el, i) => {
-                            setTimeout(() => {
-                                el.classList.add('visible');
-                            }, i * 100);
-                        });
-                    }
-                });
-            }, { threshold: 0.1 });
-            observer.observe(workflowSection);
-        }
+
     </script>
 
 </body>
